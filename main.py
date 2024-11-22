@@ -26,9 +26,11 @@ def main():
                 pygame.quit()
                 return
         
-        updatable.update(dt)
+        for update in updatable:
+            updatable.update(dt)
         
         screen.fill('black')
+        
         for sprite in drawable:
             sprite.draw(screen)
             
