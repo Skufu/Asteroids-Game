@@ -12,5 +12,8 @@ class Shot(CircleShape):
     
     def update(self, dt):
         self.position += self.velocity * dt
+    
+    def check_collision(self, asteroid):
+        return super().check_collision(asteroid)
      
         
